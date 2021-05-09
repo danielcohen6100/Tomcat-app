@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                 bat ''mkdir C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\ROOT\danielcohen"
-	bat "copy date.jsp  C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\ROOT\danielcohen\date.jsp"
+                bat '''
+                    mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\ROOT\\danielcohen"
+            	    copy date.jsp  "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\ROOT\\danielcohen\\date.jsp"
+            	'''
             }
         }
     }
